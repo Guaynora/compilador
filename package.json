@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "convert": "npx browserify ./src/js/main.js > ./dist/bundle.js"
+    "convert": "npx browserify ./src/js/main.js > ./dist/bundle.js",
+    "gen-parser": "npx nearleyc src/grammar.ne -o src/js/grammar.js"
   },
   "keywords": [],
   "author": "",
