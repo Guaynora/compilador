@@ -5,22 +5,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compiler JJ</title>
+    <title>Compilador</title>
     <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
     <header class="title">
-        <h1>Compilador JJ</h1>
+        <h1>Haley Compiler</h1>
         <button id="button">Compilar</button>
+       
+
     </header>
     <div class="col-2">
         <textarea placeholder="JJ code" class="code-jj" id="code"></textarea>
-        <div class="generate"></div>
+        <div class="generate">
+            <h2>Generador de Codigo</h2>
+        </div>
     </div>
     <div class="col-3">
-        <pre class="show" id="token"></pre>
-        <pre class="show" id="ast"></pre>
+        <pre class="show" id="token">
+            <h2>Analizador Lexico</h2>
+        </pre>
+        <pre class="show" id="ast">
+            <h2>Analizador Sintactico AST</h2>
+        </pre>
     </div>
     <script src="../dist/bundle.js" type="module"></script>
 </body>
