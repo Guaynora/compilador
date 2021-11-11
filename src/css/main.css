@@ -25,6 +25,7 @@ h1 {
 }
 
 .code-jj {
+  padding: 1rem;
   resize: none;
   outline: none;
   height: 100%;
@@ -46,6 +47,7 @@ h1 {
 }
 
 .show {
+  padding: 1rem;
   width: 50vw;
   border: 1px solid black;
   overflow-y: scroll;
