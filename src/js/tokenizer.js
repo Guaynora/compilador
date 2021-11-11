@@ -16,7 +16,6 @@ let lexer = moo.compile({
 });
 
 async function Token(code) {
-  console.log("estoy en lexer");
   lexer.reset(code);
   const tokens = [];
   while (true) {
@@ -24,11 +23,8 @@ async function Token(code) {
     if (!token) {
       break;
     }
-    //console.log(token);
     tokens.push(token);
   }
-  console.log("Tokens");
-  console.log(tokens);
   return tokens;
 }
 
