@@ -15,18 +15,24 @@
         <button id="button">Compilar</button>
     </header>
     <div class="col-2">
-        <textarea placeholder="JJ code" class="code-jj" id="code"></textarea>
-        <pre class="generate" id="generate">
+        <div class="container">
+            <h2>Codigo</h2>
+            <textarea placeholder="Code input" class="code-jj" id="code"></textarea>
+        </div>
+        <div class="Container">
             <h2>Generador de Codigo</h2>
-        </pre>
+            <pre class="generate" id="generate"></pre>
+        </div>
     </div>
     <div class="col-3">
-        <pre class="show" id="token">
+        <div class="container">
             <h2>Analizador Lexico</h2>
-        </pre>
-        <pre class="show" id="ast">
+            <pre class="show" id="token"></pre>
+        </div>
+        <div class="container">
             <h2>Analizador Sintactico AST</h2>
-        </pre>
+            <pre class="show" id="ast"></pre>
+        </div>
     </div>
     <script src="../dist/bundle.js" type="module"></script>
 </body>
