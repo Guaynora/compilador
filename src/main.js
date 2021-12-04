@@ -13,9 +13,10 @@ async function getCompiler() {
       data = await res.json();
     if (!res.ok) throw { status: res.status, statusText: res.statusText };
     console.log(data);
+    console.log(data.code);
     $token.innerHTML = data.tokens;
     $ast.innerHTML = data.ast;
-    $code.innerHTML = data.code;
+    $generate.innerHTML = data.code;
   } catch (error) {
     console.log(error);
   }
