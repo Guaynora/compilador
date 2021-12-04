@@ -15,6 +15,7 @@ async function getCompiler() {
     console.log(data);
     $token.innerHTML = data.tokens;
     $ast.innerHTML = data.ast;
+    $code.innerHTML = data.code;
   } catch (error) {
     console.log(error);
   }
@@ -42,7 +43,9 @@ async function postCode() {
 
 async function Main() {
   await postCode();
-  await getCompiler();
+  setTimeout(() => {
+    getCompiler();
+  }, 1000);
 }
 
 $button.addEventListener("click", Main);
