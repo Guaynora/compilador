@@ -5,19 +5,10 @@
 }
 
 #button {
-  background-image: -webkit-linear-gradient(top, #fcfcfc, #2079b0);
-  background-image: -moz-linear-gradient(top, #f5f0f3, #2079b0);
-  background-image: -ms-linear-gradient(top, #f5f0f3, #2079b0);
-  background-image: -o-linear-gradient(top, #fcf8fb, #2079b0);
-  background-image: linear-gradient(to bottom, #fcf9fb, #2079b0);
-  -webkit-border-radius: 19;
-  -moz-border-radius: 50;
+  background: #237bb3;
   border-radius: 20px;
-text-shadow: 3px 2px 1px #9daef5;
-  -webkit-box-shadow: 6px 5px 24px #666666;
-  -moz-box-shadow: 6px 5px 24px #666666;
-  box-shadow: 6px 5px 24px #666666;
-font-family: Arial;
+  text-shadow: 3px 2px 1px #5a6fc2;
+  font-family: Arial;
   color: #fafafa;
   font-size: 15px;
   padding: 19px;
@@ -31,19 +22,15 @@ font-family: Arial;
   justify-content: space-between;
   align-items: center;
   padding: 0 2rem;
-  font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
-  color: #ffffff; 
-  font-size: 18px; 
-  font-weight: 500; 
-  text-align: center; 
-  background: #889ccf; 
-  margin: 0 0 0px; 
-  overflow: hidden; 
-  padding: 50px; 
-  border-radius: 35px 0px 35px 0px; 
-  -moz-border-radius: 35px 0px 35px 0px; 
-  -webkit-border-radius: 35px 0px 35px 0px; 
-  border: 2px solid #5878ca;}
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  background: #889ccf;
+  margin: 0 0 0px;
+  overflow: hidden;
+  padding: 50px;
 }
 
 h1 {
@@ -76,7 +63,7 @@ h1 {
 
 .col-3 {
   background: #e8f2f8;
-  display:flex;
+  display: flex;
   flex-direction: row;
   height: 25rem;
   background: #e8f2f8;
