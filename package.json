@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "browserify": "^17.0.0",
+    "browserify-fs": "^1.0.0",
     "moo": "^0.5.1",
     "nearley": "^2.20.1"
   },
