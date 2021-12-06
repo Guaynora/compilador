@@ -13,7 +13,7 @@ async function getCompiler() {
       data = await res.json();
     if (!res.ok) throw { status: res.status, statusText: res.statusText };
     console.log(data);
-    console.log(data.code);
+    //console.log(data.output);
     $token.innerHTML = data.tokens;
     $ast.innerHTML = data.ast;
     $generate.innerHTML = data.code;
@@ -46,7 +46,7 @@ async function Main() {
   await postCode();
   setTimeout(() => {
     getCompiler();
-  }, 1000);
+  }, 2000);
 }
 
 $button.addEventListener("click", Main);
