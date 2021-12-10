@@ -13,18 +13,21 @@ const urlGet = "http://localhost:3000/generate";
 let outputCompiler = "";
 
 async function getCompiler() {
-  try {
-    let res = await fetch(urlGet),
-      data = await res.json();
-    if (!res.ok) throw { status: res.status, statusText: res.statusText };
-    console.log(data);
-    //console.log(data.output);
+  let res = await fetch(urlGet),
+    data = await res.json();
+  if (!res.ok) throw { status: res.status, statusText: res.statusText };
+  console.log(data);
+  if (data.error) {
+    let messageError = data.error;
+    let message = messageError.split(".", 1);
+    $generate.innerHTML = message;
+    $generate.style.color = "red";
+    console.log(message);
+  } else {
     $token.innerHTML = data.tokens;
     $ast.innerHTML = data.ast;
     $generate.innerHTML = data.code;
     outputCompiler = data.output;
-  } catch (error) {
-    console.log(error);
   }
 }
 
@@ -79,3 +82,17 @@ function clickTitle(type) {
 $button.addEventListener("click", Main);
 $titleGenerate.addEventListener("click", (e) => clickTitle("generate"));
 $titleOutput.addEventListener("click", (e) => clickTitle("output"));
+$code.addEventListener("keydown", function (e) {
+  if (e.key == "Tab") {
+    e.preventDefault();
+    var start = this.selectionStart;
+    var end = this.selectionEnd;
+
+    // set textarea value to: text before caret + tab + text after caret
+    this.value =
+      this.value.substring(0, start) + "\t" + this.value.substring(end);
+
+    // put caret at right position again
+    this.selectionStart = this.selectionEnd = start + 1;
+  }
+});
