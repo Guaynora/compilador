@@ -26,6 +26,7 @@ async function getCompiler() {
   } else {
     $token.innerHTML = data.tokens;
     $ast.innerHTML = data.ast;
+    $generate.style.color = "black";
     $generate.innerHTML = data.code;
     outputCompiler = data.output;
   }
